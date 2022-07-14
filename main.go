@@ -1,7 +1,7 @@
 package main
 
-import "fmt"
+import "github.com/isaque-vieira2019/challenge-bravo/routes"
 
 func main() {
-	fmt.Println("Api Conversor de moeda")
+	routes.HandleRequest()
 }
