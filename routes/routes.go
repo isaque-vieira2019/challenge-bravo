@@ -7,7 +7,9 @@ import (
 
 func HandleRequest() {
 	r := gin.Default()
+	r.GET("/updateCurrency", controllers.UpdateMainCurrency)
 	r.GET("/exchange/", controllers.ExchangeCurrency)
-	r.GET("/exchange/add/", controllers.AddCurrency)
-	r.GET("/exchange/remove/", controllers.RemoveCurrency)
+	r.POST("/exchange/add/", controllers.AddCurrency)
+	r.DELETE("/exchange/remove/", controllers.RemoveCurrency)
+	r.Run(":8000")
 }
